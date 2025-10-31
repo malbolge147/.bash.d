@@ -226,24 +226,6 @@ tagz() {
 	echo "✅ Done: created '$archive' and removed '$name/'"
 }
 
-trr() {
-	local name="$(basename "$PWD")"
-	local archive="../${name}.tar"
-
-	echo "🗜️ Archiving '$name' into '$archive'..."
-	tar -cf "$archive" -C .. "$name" || {
-		echo "❌ Archiving failed."
-		return 1
-	}
-
-	cd .. || {
-		echo "❌ Failed to change directory."
-		return 1
-	}
-
-	rm -rf "$name"
-	echo "✅ Done: created '$archive' and removed '$name/'"
-}
 
 txz() {
 	local name="$(basename "$PWD")"
