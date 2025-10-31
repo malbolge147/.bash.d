@@ -1,4 +1,8 @@
 #!/bin/sh
+
+
+alias gs='git switch'
+alias gb='git branch'
 alias ee='cd ~/isaac/whl/targz'
 alias psw='python3 setup.py bdist_wheel'
 alias ruf='ruff format .'
@@ -32,9 +36,9 @@ alias dupf='dupff --threads 8 .'
 alias fdd='find . -type d -name'
 alias ff='find . -type f -name '
 alias g1='git clone --depth 1'
-alias ga="git add"
+alias ga="git add ."
 alias gb='git branch -a'
-alias gc="git commit"
+alias gc="git commit -m"
 alias git1='git clone  --depth 1 --single-branch --branch main '
 alias git2='git clone  --depth 1 --single-branch --branch master'
 alias gitlink2='git remote set-url origin https://github.com/isaac4everlast/{%@}.git'
