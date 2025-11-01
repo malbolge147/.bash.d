@@ -200,12 +200,12 @@ g2() {
 	echo "   To update later: cd $target && git fetch origin $branch"
 }
 
-tagz() {
+trr() {
 	local name="$(basename "$PWD")"
-	local archive="../${name}.tar.gz"
+	local archive="../${name}.tar"
 
 	echo "🗜️ Compressing '$name' into '$archive'..."
-	tar -czf "$archive" -C .. "$name" || {
+	tar -cf "$archive" -C .. "$name" || {
 		echo "❌ Compression failed."
 		return 1
 	}
