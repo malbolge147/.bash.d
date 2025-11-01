@@ -1,1 +1,1 @@
-# .bash.d
+# bash aliases and functions

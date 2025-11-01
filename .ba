@@ -1,5 +1,5 @@
 #!/bin/sh
-alias myp='cd ~/isaac/myprojects'
+alias myp='cd ~/isaac/myprojects/nov'
 alias rsynctmp='rsync -rv $PREFIX/tmp $HOME/tmp'
 alias gittagsort2='git tag -l "v1.*"'
 alias gittagsort='git tag --sort=-version:refname'
@@ -49,7 +49,7 @@ alias git2='git clone  --depth 1 --single-branch --branch master'
 alias gitlink2='git remote set-url origin https://github.com/isaac4everlast/{%@}.git'
 alias gitpush1='git push -u origin master'
 alias gl="git log --oneline --graph --decorate"
-alias gp="git push"
+alias gp='git add . && git commit -m "november 2025" && git push'
 alias grc='gh repo clone'
 alias htb='html-beautify'
 alias ii='cd ~/storage/shared/isaac'
