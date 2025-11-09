@@ -1,10 +1,9 @@
 #!/bin/sh
 
 dupwhl() {
-fd -e whl | sed -E 's/-[0-9].*//' | sort | uniq -d
+	fd -e whl | sed -E 's/-[0-9].*//' | sort | uniq -d
 
 }
-
 
 mp32ogg() {
 	fd -e mp3 -i . | while read -r f; do
@@ -40,16 +39,15 @@ mp32opus() {
 }
 fdelc() {
 
-    fd -t d -i -g --hidden "$1" | while read -r dir; do
-        read -p "Delete '$dir'? [y/N] " ans
-    if [[ "$ans" =~ ^[Yy]$ ]]; then
-        rm -rf "$dir"
-        echo "Deleted: $dir"
-    fi
-done
+	fd -t d -i -g --hidden "$1" | while read -r dir; do
+		read -p "Delete '$dir'? [y/N] " ans
+		if [[ "$ans" =~ ^[Yy]$ ]]; then
+			rm -rf "$dir"
+			echo "Deleted: $dir"
+		fi
+	done
 }
 
-
 fdel() {
-    fd -t d -i -g --hidden "$1" -x rm -rf {}
+	fd -t d -i -g --hidden "$1" -x rm -rf {}
 }

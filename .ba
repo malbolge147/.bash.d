@@ -1,7 +1,8 @@
 #!/bin/sh
-
+alias pku='pkg uninstall'
+alias ubin='cd $PREFIX/bin'
 alias mv="mv -i"
-alias cp="cp -i" 
+alias cp="cp -i"
 alias rm="rm -i"
 alias gitprivate='gh repo edit --visibility private --accept-visibility-change-consequences'
 alias mm='cd ~/isaac/myprojects/nov'
@@ -32,7 +33,7 @@ alias bkk='fd -e bak -x rm -v {}'
 alias blk='black --verbose -t py312 -l 50 --color --pyi  -x -W 8 .'
 alias c='clear'
 alias cd..='cd ..'
-alias cdbin='cd ~/bin'
+alias bb='cd ~/bin'
 alias compal='python -m compileall -r9 -o2 -j8 .'
 alias cppc='g++ -std=c++17 -Wall -Wextra -O2'
 alias cx='cd'
@@ -65,7 +66,10 @@ alias nano='nano --saveonexit'
 alias n4='n ~/.bash.d/.bf'
 alias nn='n ~/.bash.d/.ba'
 alias nnn='n ~/.bashrc'
+
 alias notar='for f in *.tar;do mv "$f" "${f//.tar/}";done'
+alias nopy='for f in *;do mv "$f" "${f//-py3-none-any/}";done'
+
 alias npyx='source /data/data/com.termux/files/home/.bashrc2 && source ~/isaac/.venv/bin/activate'
 alias optik='fd -e png -x optipng -o7 -v {}'
 alias p9='python -m pip install --no-index --find-links=/sdcard/whl'
@@ -82,7 +86,7 @@ alias prethtml='fd -e html -x prettier -w {}'
 alias pretjson='fd -e json -x prettier -w {}'
 alias prethtm='fd -e htm -x prettier -w {}'
 alias pretts='fd -e ts -x prettier -w {}'
-alias pip='python -m pip --verbose --no-deps'
+alias pip='python -m pip --verbose'
 alias pu='python -m pip install -U --no-deps --verbose --force-reinstall'
 alias py='python3'
 alias repos='cd ~/isaac/repos'

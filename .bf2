@@ -150,7 +150,7 @@ if __name__ == "__main__":
 EOF
 	chmod +x "$file"
 	echo "Created $file with Python template"
-#	nano "$file"
+	#	nano "$file"
 }
 
 g2() {
@@ -217,7 +217,6 @@ trr() {
 	echo "✅ Done: created '$archive' and removed '$name/'"
 }
 
-
 txz() {
 	local name="$(basename "$PWD")"
 	local archive="../${name}.tar.xz"
@@ -242,4 +241,15 @@ txz() {
 
 	rm -rf "$name"
 	echo "✅ Done: created '$archive' and removed '$name/'"
+}
+
+extract_all_7z() {
+	local file
+	for file in *; do
+		# Only regular files that 7z can handle
+		if [[ -f "$file" ]] && 7z l "$file" >/dev/null 2>&1; then
+			echo "=== Extracting: $file ==="
+			7z x "$file" -y # -y = assume Yes on all queries
+		fi
+	done
 }
