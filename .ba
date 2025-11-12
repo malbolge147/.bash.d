@@ -1,9 +1,10 @@
 #!/bin/sh
+alias gcli='gemini-cli --token AIzaSyACEFaXYM4EslsNvOCoiFDl2tg-7kpxMdI'
 alias pku='pkg uninstall'
 alias ubin='cd $PREFIX/bin'
 alias mv="mv -i"
 alias cp="cp -i"
-alias rm="rm -i"
+alias rm="rm -v"
 alias gitprivate='gh repo edit --visibility private --accept-visibility-change-consequences'
 alias mm='cd ~/isaac/myprojects/nov'
 alias rtmp='rsync -rv $PREFIX/tmp $HOME/tmp'

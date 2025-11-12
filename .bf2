@@ -1,4 +1,49 @@
 #!/bin/bash
+# find recently created files within 10 to 120minutes
+f10() {
+    find . -type f -mmin -10 -printf '%f  %s bytes\n'
+}
+
+f20() {
+    find . -type f -mmin -20 -printf '%f  %s bytes\n'
+}
+
+f30() {
+    find . -type f -mmin -30 -printf '%f  %s bytes\n'
+}
+
+f40() {
+    find . -type f -mmin -40 -printf '%f  %s bytes\n'
+}
+
+f50() {
+    find . -type f -mmin -50 -printf '%f  %s bytes\n'
+}
+
+f60() {
+    find . -type f -mmin -60 -printf '%f  %s bytes\n'
+}
+
+f70() {
+    find . -type f -mmin -70 -printf '%f  %s bytes\n'
+}
+
+f80() {
+    find . -type f -mmin -80 -printf '%f  %s bytes\n'
+}
+
+f90() {
+    find . -type f -mmin -90 -printf '%f  %s bytes\n'
+}
+
+f100() {
+    find . -type f -mmin -100 -printf '%f  %s bytes\n'
+}
+
+f120() {
+    find . -type f -mmin -120 -printf '%f  %s bytes\n'
+}
+
 
 dmp2() {
 	fd --type d --empty --exec rmdir {}
@@ -243,7 +288,8 @@ txz() {
 	echo "✅ Done: created '$archive' and removed '$name/'"
 }
 
-extract_all_7z() {
+
+7zx() {
 	local file
 	for file in *; do
 		# Only regular files that 7z can handle
